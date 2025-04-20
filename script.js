@@ -33,4 +33,22 @@ form.addEventListener('submit', async (event) => {
         submitButton.disabled = false;
         submitButton.textContent = 'Submit Package Request';
     }
+});
+
+// Collapsible functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const coll = document.getElementsByClassName("collapsible");
+    
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+            } else {
+                content.classList.add('active');
+            }
+        });
+    }
 }); 
