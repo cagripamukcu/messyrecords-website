@@ -2,18 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messy Records UK - Music Production Offer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Messy Records UK - Professional Music Production Services</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Messy Records UK - Professional Music Production Services">
+    <meta name="description" content="Transform your music with professional production services. Limited time offer: Complete song production package for £600. Book your spot now!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://messyrecords.co.uk/">
+    <meta property="og:title" content="Messy Records UK - Professional Music Production Services">
+    <meta property="og:description" content="Transform your music with professional production services. Limited time offer: Complete song production package for £600. Book your spot now!">
+    <meta property="og:image" content="https://messyrecords.co.uk/assets/flyer-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Messy Records UK">
+    <meta property="og:locale" content="en_GB">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://messyrecords.co.uk/">
+    <meta name="twitter:title" content="Messy Records UK - Professional Music Production Services">
+    <meta name="twitter:description" content="Transform your music with professional production services. Limited time offer: Complete song production package for £600. Book your spot now!">
+    <meta name="twitter:image" content="https://messyrecords.co.uk/assets/flyer-image.jpg">
+    
+    <!-- Mobile specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#A31F1F">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
@@ -73,13 +110,15 @@
                 <h2>Book Your Package</h2>
                 <div class="booking-grid">
                     <div class="booking-form">
-                        <form id="booking-form">
+                        <form id="booking-form" action="https://formspree.io/f/your-form-id" method="POST">
                             <!-- Honeypot field to prevent spam -->
                             <input type="text" name="_honey" style="display: none">
                             <!-- Disable captcha -->
                             <input type="hidden" name="_captcha" value="false">
                             <!-- Customize subject -->
                             <input type="hidden" name="_subject" value="New Messy Records Booking Request">
+                            <!-- Redirect to confirmation page -->
+                            <input type="hidden" name="_next" value="https://messyrecords.co.uk/confirmation.html">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" required>
