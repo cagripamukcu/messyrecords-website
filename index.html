@@ -18,10 +18,10 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://messyrecords.co.uk/">
-    <meta property="og:title" content="Messy Records UK - Professional Music Production Services">
-    <meta property="og:description" content="Transform your music with professional production services. Limited time offer: Complete song production package for £600. Book your spot now!">
-    <meta property="og:image" content="https://messyrecords.co.uk/A_promotional_digital_graphic_design_flyer_for_Mes.png">
+    <meta property="og:url" content="https://messyrecords.co.uk">
+    <meta property="og:title" content="Messy Records UK - Music Production & Recording Studio">
+    <meta property="og:description" content="Professional music production, recording, mixing and mastering services in the UK. Transform your music with our expert production team.">
+    <meta property="og:image" content="https://messyrecords.co.uk/images/promo-flyer.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Messy Records UK">
@@ -29,10 +29,10 @@
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://messyrecords.co.uk/">
-    <meta name="twitter:title" content="Messy Records UK - Professional Music Production Services">
-    <meta name="twitter:description" content="Transform your music with professional production services. Limited time offer: Complete song production package for £600. Book your spot now!">
-    <meta name="twitter:image" content="https://messyrecords.co.uk/A_promotional_digital_graphic_design_flyer_for_Mes.png">
+    <meta name="twitter:url" content="https://messyrecords.co.uk">
+    <meta name="twitter:title" content="Messy Records UK - Music Production & Recording Studio">
+    <meta name="twitter:description" content="Professional music production, recording, mixing and mastering services in the UK. Transform your music with our expert production team.">
+    <meta name="twitter:image" content="https://messyrecords.co.uk/images/promo-flyer.png">
     
     <!-- Mobile specific -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -57,7 +57,13 @@
     <main class="landing-page">
         <section class="hero">
             <div class="container">
-                <img src="A_promotional_digital_graphic_design_flyer_for_Mes.png" alt="Messy Records UK Promotional Offer" class="hero-image">
+                <img 
+                    src="/images/promo-flyer.png" 
+                    alt="Messy Records UK Promotional Offer" 
+                    class="hero-image"
+                    onerror="console.error('Image failed to load from path:', this.src); this.style.display='none';"
+                    onload="console.log('Image successfully loaded from:', this.src); this.style.display='block';"
+                >
                 <a href="https://wa.me/447444026525" class="cta-button">Message Now via WhatsApp to Claim Your Spot</a>
             </div>
         </section>
@@ -118,7 +124,7 @@
                             <!-- Customize subject -->
                             <input type="hidden" name="_subject" value="New Messy Records Booking Request">
                             <!-- Redirect to confirmation page -->
-                            <input type="hidden" name="_next" value="https://messyrecords.co.uk/confirmation.html">
+                            <input type="hidden" name="_next" value="https://www.messyrecords.co.uk/confirmation.html">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" required>

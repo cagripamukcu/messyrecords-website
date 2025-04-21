@@ -29,16 +29,26 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 40px 0;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: var(--color-cream);
+}
+
+.hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
     text-align: center;
 }
 
 .hero-image {
     max-width: 100%;
+    width: auto;
     height: auto;
-    margin-bottom: 30px;
+    margin: 0 auto 2rem;
+    display: block;
+    object-fit: contain;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button {
@@ -265,6 +275,11 @@ body {
 
     .booking-section h2 {
         font-size: 2rem;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
     }
 }
 
