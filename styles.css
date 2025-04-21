@@ -770,6 +770,12 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow: hidden;
+}
+
+.submission-overlay.active {
+    position: fixed;
+    overflow: hidden;
 }
 
 .submission-confirmation {
@@ -780,6 +786,9 @@ body {
     max-width: 400px;
     width: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: auto;
+    transform: translateY(0);
 }
 
 .submission-confirmation .checkmark {
@@ -801,6 +810,21 @@ body {
     margin-top: 15px;
 }
 
+.submission-confirmation .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submission-confirmation .btn:hover {
+    background-color: #218838;
+}
+
 @keyframes scaleIn {
     0% {
         transform: scale(0);
@@ -811,6 +835,14 @@ body {
     100% {
         transform: scale(1);
     }
+}
+
+/* Prevent body scrolling when overlay is active */
+body.overlay-active {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 /* Responsive adjustments */

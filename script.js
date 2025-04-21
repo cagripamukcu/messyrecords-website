@@ -41,9 +41,20 @@ form.addEventListener('submit', async (event) => {
         redirectMessage.className = 'redirect-message';
         redirectMessage.textContent = 'We will contact you via WhatsApp shortly to confirm your session and arrange payment.';
         
+        // Add a close button
+        const closeButton = document.createElement('button');
+        closeButton.className = 'btn';
+        closeButton.textContent = 'Close';
+        closeButton.style.marginTop = '20px';
+        closeButton.onclick = () => {
+            overlay.remove();
+            form.reset();
+        };
+        
         confirmation.appendChild(checkmark);
         confirmation.appendChild(message);
         confirmation.appendChild(redirectMessage);
+        confirmation.appendChild(closeButton);
         overlay.appendChild(confirmation);
         document.body.appendChild(overlay);
 
@@ -58,16 +69,9 @@ form.addEventListener('submit', async (event) => {
             throw new Error('Network response was not ok');
         }
 
-        // Reset the form
-        form.reset();
-        
-        // Remove the overlay after 3 seconds
-        setTimeout(() => {
-            overlay.remove();
-        }, 3000);
-
     } catch (error) {
         alert('There was an error submitting your booking. Please try again or contact us directly via WhatsApp.');
+        overlay.remove();
     } finally {
         submitButton.disabled = false;
         submitButton.textContent = 'Submit Package Request';
