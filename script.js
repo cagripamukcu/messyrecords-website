@@ -60,18 +60,19 @@ form.addEventListener('submit', async (event) => {
 
         // Submit the form data
         const formData = new FormData(form);
-        const response = await fetch(form.action, {
+        await fetch(form.action, {
             method: 'POST',
-            body: formData
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
         });
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+        // Reset the form after successful submission
+        form.reset();
 
     } catch (error) {
-        alert('There was an error submitting your booking. Please try again or contact us directly via WhatsApp.');
-        overlay.remove();
+        console.error('Form submission error:', error);
     } finally {
         submitButton.disabled = false;
         submitButton.textContent = 'Submit Package Request';
